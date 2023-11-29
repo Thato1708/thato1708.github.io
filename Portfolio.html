@@ -19,25 +19,117 @@
             </ul>
         </nav>
         <div class="header-text">
-            <table>
-                <tr>
-                    <td><p>Software Developer</p>
-                        <h1>Hi, My Name Is Ntando Machaea but you can call me Thato</h1></td>
-                    <td><img src="image.png" id="selfimg"></td>
-                </tr> 
-            </table>
+            <div class="header-col-1">
+                <p>Software Developer</p>
+                <h1>Hi, My Name Is <span>Ntando</span><br>but you can call me Thato</h1>
+            </div>
+            <div class="header-col-2">
+                <img src="image.png" id="selfimg">
+            </div>
         </div>
     </div>
 </div>
 <br>
 <br>
-<div>
-    <h1 id="about">About Me</h1>
-    <br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad <br> minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit <br> in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="WhatsApp Image 2023-11-29.jpeg" id="selfimg2">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <br>
+                <p style="color: white;">
+                    Born and bred in the Eastern Cape, I am a motivated young man with 3 years of programming in C# and 1 year with python and JavaScript.
+                    I am always up for learning or taking on new challenges as I believe, problem-solving is a skill that you never stop developing. I love
+                    video gaming and watching movies on my free time.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-content active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development:</span><br>Designing Web Applications</li>
+                        <li><span>Technical Skills:</span><br>C#, Python, JavaScript, html/CSS, MS SQL Server</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-content" id="experience">
+                    <ul>
+                        <li><span>12/2019 - 02/2020:</span><br>Bartender - News Cafe</li>
+                        <li><span>03/2023 - 06/2023:</span><br>Student Assistant- Nelson Mandela University</li>
+                        <li><span>07/2023 - 09/2023:</span><br>L1 Support Analyst - Construct Education</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-content" id="education">
+                    <ul>
+                        <li><span>Matric:</span><br>Byletts Combined School</li>
+                        <li><span>Dip IT (Software Development):</span><br>Nelson Mandela University</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <br>
 <br>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Projects</h1>
+        <br>
+        <div class="project-list">
+            <div class="project">
+                <img src="Adobe_Express.png" id="nompiloimg"><br>
+                <div class="layer">
+                    <h3>Clinic Appointment Management WebApp</h3><br>
+                    <p>The app assists patients and clinic staff with managing appointments and was developed using
+                        MVC and bootstrap 5. It can be viewed on my GitHub.
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="tic-tac-toe.png" id="tictactoeimg"><br>
+                <div class="layer">
+                    <h3>TicTacToe Game</h3><br>
+                    <p>This is a TicTacToe game which I developed using python,
+                        It can be viewed on my GitHub.
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="rps.jpg" id="rpsimg"><br>
+                <div class="layer">
+                    <h3>RockPaperScissors Game</h3><br>
+                    <p>This is a rock, paper,scissors game which I developed using JavaScript,
+                        It can be viewed on my GitHub.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontent = document.getElementsByClassName("tab-content");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcont of tabcontent){
+            tabcont.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+</script>
 
 </body>
 
