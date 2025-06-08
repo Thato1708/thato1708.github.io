@@ -156,5 +156,17 @@
     
 </script>
 
+
+<script>
+  document.getElementById("about-link").addEventListener("click", function (e) {
+    if (window.innerWidth <= 600) {
+      e.preventDefault(); // Stop default anchor jump
+      document.getElementById("about-text").scrollIntoView({ behavior: "smooth" });
+    }
+    // On desktop, default anchor behavior will go to #about
+  });
+</script>
+
+
 </body>
 
