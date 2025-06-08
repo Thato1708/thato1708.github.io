@@ -16,7 +16,7 @@
             <img src="Screenshot (43)(2).png" class="logo">
             <ul>
                 <li><a href="#header">Home</a></li>
-                <li><a href="#About">About</a></li>
+                <li><a href="#About" id="about-link">About</a></li>
                 <li><a href="#portfolio">My Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -160,11 +160,12 @@
   document.getElementById("about-link").addEventListener("click", function (e) {
     if (window.innerWidth <= 600) {
       e.preventDefault(); // Stop default anchor jump
-      document.getElementById("about-text").scrollIntoView({ behavior: "smooth" });
+      document.querySelector(".about-col-2").scrollIntoView({ behavior: "smooth" });
     }
-    // On desktop, default anchor behavior will go to #about
+    // On desktop, default anchor behavior will go to #About
   });
 </script>
+
 
 
 </body>
