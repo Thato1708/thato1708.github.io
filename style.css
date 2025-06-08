@@ -178,6 +178,7 @@ table{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    width:100%;
 }
 
 .project img{
