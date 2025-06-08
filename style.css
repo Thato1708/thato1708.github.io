@@ -181,10 +181,10 @@ table{
 }
 
 .project img{
-    width: 80%;
+    width: 100%;
     border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
+    height: auto;
+    transition: transform 0.5s ease;
 }
 
 .layer{
@@ -317,13 +317,7 @@ table{
     .project img {
         width: 100%;
         height: auto;
-    }
-
-    #nompiloimg,
-    #tictactoeimg,
-    #rpsimg {
-        width: 100%;
-        height: auto;
+        border-radius: 10px
     }
 
     .layer {
